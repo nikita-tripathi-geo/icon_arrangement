@@ -25,7 +25,7 @@ run_app:
 	find pages_files -exec sed -i.bak 's|_dash-dependencies|icon_arrangement/_dash-dependencies.json|g' {} \;
 	find pages_files -exec sed -i.bak 's|_reload-hash|icon_arrangement/_reload-hash|g' {} \;
 	find pages_files -exec sed -i.bak 's|_dash-update-component|icon_arrangement/_dash-update-component|g' {} \;
-	find pages_files -exec sed -i.bak 's|assets|icon_arrangement/assets|g' {} \;
+	# find pages_files -exec sed -i.bak 's|assets|icon_arrangement/assets|g' {} \;
 
 	mv pages_files/_dash-layout pages_files/_dash-layout.json
 	mv pages_files/_dash-dependencies pages_files/_dash-dependencies.json
