@@ -56,9 +56,11 @@ for wall in walls:
 # Dash layout
 app.layout = dash.html.Div([
     dash.html.H1("Wall Icon Arrangement"),
+    dash.html.H6("Legend: Wall numbering is given in the image below."),
+    dash.html.Img(src="./assets/floorplan.png"),
     # dash.dcc.Graph(figure=fig),
     *figures,
-    dash.html.Img(src="./assets/1.png")
+    # dash.html.Img(src="./assets/1.png")
 ])
 
 # Run the app
