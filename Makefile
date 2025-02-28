@@ -2,7 +2,6 @@ run_app:
 	python3 app.py & sleep 30
 
 	wget -r http://127.0.0.1:8050/
-	wget -r http://127.0.0.1:8050/assets/
 	wget -r http://127.0.0.1:8050/_dash-layout 
 	wget -r http://127.0.0.1:8050/_dash-dependencies
 
@@ -17,6 +16,7 @@ run_app:
 	wget -r http://127.0.0.1:8050/_dash-component-suites/plotly/package_data/plotly.min.js
 
 	mv 127.0.0.1:8050 pages_files
+	mkdir pages_files/assets
 	ls -a pages_files
 	ls -a pages_files/assets
 
