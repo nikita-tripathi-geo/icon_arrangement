@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 from arrange_icons import main as arrange_icons
 
 # Init Dash app
-app = dash.Dash(__name__)
+app = dash.Dash(__name__, assets_folder="assets")
 
 # Arrange Icons
 # walls, unhung = arrange_icons()
@@ -37,8 +37,8 @@ for wall in walls:
             y=abs(y/wall.height - 1),
             xanchor="left",
             yanchor="top",
-            sizex=(icon.width - 30)/wall.width,
-            sizey=(icon.height - 30)/wall.height ,
+            sizex=icon.width/wall.width,
+            sizey=icon.height/wall.height ,
         )
 
 
@@ -58,7 +58,7 @@ app.layout = dash.html.Div([
     dash.html.H1("Wall Icon Arrangement"),
     # dash.dcc.Graph(figure=fig),
     *figures,
-    # dash.html.Img(src="./assets/1.png", draggable="true")
+    dash.html.Img(src="./assets/1.png")
 ])
 
 # Run the app
